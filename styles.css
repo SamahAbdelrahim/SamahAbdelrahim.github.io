@@ -74,20 +74,10 @@ footer {
     margin-top: 2em;
 }
 
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    padding: 1em 0;
-    background-color: #222;
-    border-radius: 10px;
-    padding: 2em;
-}
-
 .gallery img {
-    width: 20%;
-    min-width: 150px;
+    width: 15%;
+    min-width: 120px;
+    max-width: 150px;
     height: auto;
     border-radius: 10px;
     object-fit: contain;
@@ -96,7 +86,44 @@ footer {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 2em;
+    background-color: #222;
+    border-radius: 10px;
+}
+
+
 .gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+
+.teaching, .mentorship, .research {
+    background: #f4f4f4;
+    padding: 2em;
+    margin: 1em 0;
+    border-radius: 10px;
+}
+
+.teaching ul, .mentorship ul, .research ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.teaching li, .mentorship li, .research li {
+    background: #fff;
+    padding: 1em;
+    margin: 0.5em 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
