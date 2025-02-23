@@ -88,13 +88,43 @@ nav a:hover {
 }
 
 footer {
-    background-color: #333;
+    background-color: #333; /* Dark background for elegance */
     color: #fff;
     text-align: center;
-    padding: 1em 0;
-    position: relative;
+    padding: 20px;
+    font-family: 'Georgia', serif; /* Literary, refined look */
     width: 100%;
-    margin-top: 2em;
+    margin-top: 40px;
+}
+
+.quote-container {
+    max-width: 60%; /* Limits width for better readability */
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 1.6; /* Improves readability */
+}
+
+.quote-arabic, .quote-english {
+    font-size: 13px; /* Smaller, refined font size */
+    font-style: italic;
+    text-align: center;
+}
+
+.quote-arabic {
+    direction: rtl; /* Ensures proper Arabic alignment */
+    margin-bottom: 10px;
+}
+
+.quote-english {
+    direction: ltr;
+    margin-bottom: 10px;
+}
+
+.quote-author {
+    font-size: 10px;
+    font-weight: bold;
+    color: #bbb; /* Slightly dimmed for hierarchy */
+    margin-top: 10px;
 }
 
 .gallery img {
