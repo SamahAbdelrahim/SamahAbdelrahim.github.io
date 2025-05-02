@@ -428,3 +428,44 @@ footer {
 .icon-link span {
     font-size: 0.9rem;
 }
+
+.current-projects {
+    margin: 2rem 0;
+}
+
+.project {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project h4 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.project p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.project-reference {
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+
+.project-reference a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.project-reference a:hover {
+    text-decoration: underline;
+}
