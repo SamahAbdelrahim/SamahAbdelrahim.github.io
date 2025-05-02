@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samah Abdelrahim - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
+
+<script>
+    function toggleNav() {
+        document.getElementById("navLinks").classList.toggle("active");
+    }
+</script>
 
 <body>
     <div class="hero-header">
@@ -14,11 +23,11 @@
                 <img src="gallery/image3.jpg" alt="Image 4" class="header-image">
                 <img src="gallery/image2.jpg" alt="Image 3" class="header-image">
             </div>
-            
+
             <div class="header-text">
                 <p class="name">Samah Abdelrahim | سماح </p>
-                <p class="welcome">Welcome! thanks for being curious about me </p> 
-                <p class="arabic"> حبابكم عشرة بلا كشرة :)  </p>
+                <p class="welcome">Welcome! thanks for being curious about me </p>
+                <p class="arabic"> حبابكم عشرة بلا كشرة :) </p>
             </div>
 
             <!-- <header>
@@ -34,28 +43,39 @@
         </div>
     </div>
 
+
     <nav>
         <div class="nav-container">
-            <a href="index.html">The Person</a>
-            <!-- <a href="teaching.html">Teaching/Mentorship</a> -->
-            <!-- <a href="mentorship.html">Mentorship</a> -->
-            <a href="research.html">The Researcher</a>
-            <!-- <a href="cv.html">CV</a> -->
+            <div class="nav-logo">Samah</div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">The Person</a>
+                <a href="research.html">The Researcher</a>
+            </div>
+            <div class="nav-toggle" onclick="toggleNav()">☰</div>
         </div>
     </nav>
+
 
     <div class="container">
         <section id="about" class="section">
             <h2>About Me</h2>
             <div class="about-container">
                 <div class="about-text">
-                    <p>Hello! I'm <a href="https://profiles.stanford.edu/samah-abdelrahim" target="_blank">Samah</a> (or in Arabic, سماح), a PhD student in the Psychology Department at Stanford University. I work with <a href="https://web.stanford.edu/~mcfrank/" target="_blank">Michael C. Frank</a> in the Language and Cognition Lab.</p>
-                    
-                    <p>Broadly, I'm fascinated by how children make sense of the world, especially how they acquire language. I consider myself a **developmental psychologist under construction** 😃.</p>
-        
-                    <p>When I'm not running studies with children, analyzing data, or struggling with statistical models and online experiments, I often find myself questioning the scientific endeavor itself, pondering the legitimacy of psychological findings and the nature of knowledge.</p>
-        
-                    <p>Outside of research, I enjoy listening to Arabic music, watching TV, chatting with family and friends, and exploring the rich tradition of Islamic Sufism.</p>
+                    <p>Hello! I'm <a href="https://profiles.stanford.edu/samah-abdelrahim" target="_blank">Samah</a> (or
+                        in Arabic, سماح), a PhD student in the Psychology Department at Stanford University. I work with
+                        <a href="https://web.stanford.edu/~mcfrank/" target="_blank">Michael C. Frank</a> in the
+                        Language and Cognition Lab.
+                    </p>
+
+                    <p>Broadly, I'm fascinated by how children make sense of the world, especially how they acquire
+                        language. I consider myself a **developmental psychologist under construction** 😃.</p>
+
+                    <p>When I'm not running studies with children, analyzing data, or struggling with statistical models
+                        and online experiments, I often find myself questioning the scientific endeavor itself,
+                        pondering the legitimacy of psychological findings and the nature of knowledge.</p>
+
+                    <p>Outside of research, I enjoy listening to Arabic music, watching TV, chatting with family and
+                        friends, and exploring the rich tradition of Islamic Sufism.</p>
                 </div>
                 <div class="about-image">
                     <img src="gallery/lab_logo_stanford.png" alt="Lab Logo">
@@ -67,21 +87,27 @@
             <h2>Background</h2>
             <div class="background-container">
                 <div class="background-text">
-                    <p>I was born and raised in Khartoum, Sudan; right where the River Nile comes to life. If you’re curious to know more, check out my blog post:  
-                        <a href="https://samahrahim.medium.com/a-flesh-in-palo-alto-a-soul-in-khartoum-c643c95aee32" target="_blank"><em>A Flesh in Palo Alto, A Soul in Khartoum</em></a>.
+                    <p>I was born and raised in Khartoum, Sudan; right where the River Nile comes to life. If you’re
+                        curious to know more, check out my blog post:
+                        <a href="https://samahrahim.medium.com/a-flesh-in-palo-alto-a-soul-in-khartoum-c643c95aee32"
+                            target="_blank"><em>A Flesh in Palo Alto, A Soul in Khartoum</em></a>.
                     </p>
-                    
-                    <p>Before Stanford, I earned a bachelor's degree in Electrical and Electronic Engineering at the University of Khartoum. But over time, I found thinking about the human mind far more captivating than thinking about circuits and engines. Now, I study **little minds with big ideas and boundless curiosity** in other words, children.</p>
-                    
+
+                    <p>Before Stanford, I earned a bachelor's degree in Electrical and Electronic Engineering at the
+                        University of Khartoum. But over time, I found thinking about the human mind far more
+                        captivating than thinking about circuits and engines. Now, I study **little minds with big ideas
+                        and boundless curiosity** in other words, children.</p>
+
                     <p>انا بت مقرن النيلين :)</p>
-        
+
                     <div class="blog-links">
-                        <p>Want to read more? Visit my blog (Gblog is mostly in Arabic, Medium is mostly in English :D):</p>
-                        <a href="https://samahrahim.medium.com/" target="_blank">Medium Blog</a> 
+                        <p>Want to read more? Visit my blog (Gblog is mostly in Arabic, Medium is mostly in English :D):
+                        </p>
+                        <a href="https://samahrahim.medium.com/" target="_blank">Medium Blog</a>
                         <a href="https://samahrahim.blogspot.com/" target="_blank">Google Blogspot</a>
                     </div>
                 </div>
-                
+
                 <div class="background-images">
                     <img src="gallery/Tuti-Island-1.jpg" alt="River Nile">
                     <img src="gallery/image1.jpg" alt="Image 1">
@@ -90,15 +116,22 @@
         </section>
 
         <section id="cv" class="section">
-            <h2>Curriculum Vitae</h2>
+            <h2>Related Links</h2>
             <div class="cv-content">
-                <p>You can download my full CV <a href="assets/cv.pdf" target="_blank">here</a>.</p>
-                
-                <!-- <h3>Education</h3>
-                <ul>
-                    <li>PhD in Psychology, Stanford University (In Progress)</li>
-                    <li>B.Sc. in Electrical and Electronic Engineering, University of Khartoum</li>
-                </ul> -->
+                <div class="links-container">
+                    <a href="Samah_CV_2024.pdf" target="_blank" class="icon-link">
+                        <i class="fas fa-file-alt"></i>
+                        <span>CV</span>
+                    </a>
+                    <a href="https://github.com/SamahAbdelrahim" target="_blank" class="icon-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://osf.io/nw7ze" target="_blank" class="icon-link">
+                        <i class="ai ai-osf"></i>
+                        <span>OSF</span>
+                    </a>
+                </div>
             </div>
         </section>
     </div>
@@ -111,9 +144,10 @@
                 وإن كنت لا أستطيع أن أغفر فسأحاول أن أنسى"
             </p>
             <p class="quote-english">
-                "I choose life. I shall live because there are a few people I want to stay with for the longest possible time and because I have duties to discharge.
-                 It is not my concern whether or not life has meaning. 
-                 If I am unable to forgive, then I shall try to forget."
+                "I choose life. I shall live because there are a few people I want to stay with for the longest possible
+                time and because I have duties to discharge.
+                It is not my concern whether or not life has meaning.
+                If I am unable to forgive, then I shall try to forget."
             </p>
             <p class="quote-author">
                 ― Tayeb Salih, *Season of Migration to the North*
@@ -122,4 +156,5 @@
         <p>&copy; 2025 Samah Abdelrahim. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

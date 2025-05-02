@@ -11,6 +11,7 @@ header {
     padding: 1em 0;
     text-align: center;
 }
+
 .hero-header {
     background-color: #000;
     width: 100%;
@@ -27,7 +28,8 @@ header {
     padding: 0 20px;
 }
 
-.header-gallery-left, .header-gallery-right {
+.header-gallery-left,
+.header-gallery-right {
     display: flex;
     flex-direction: row;
     gap: 15px;
@@ -39,13 +41,13 @@ header {
     height: 140px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-image:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(255,255,255,0.2);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
 }
 
 header {
@@ -67,6 +69,7 @@ header p {
     opacity: 0.9;
 }
 
+
 nav {
     background-color: #fff;
     padding: 10px 0;
@@ -77,9 +80,10 @@ nav {
     justify-content: center;
     gap: 40px;
     padding: 20px 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.95), rgba(0,0,0,0.85), rgba(0,0,0,0.95));
-    margin-top: -30px;  /* This will pull it up closer to the header */
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95));
+    margin-top: -30px;
+    /* This will pull it up closer to the header */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container a {
@@ -158,7 +162,6 @@ nav a:hover {
     }
 }
 
-
 .container {
     width: 80%;
     margin: auto;
@@ -193,30 +196,37 @@ nav a:hover {
 }
 
 footer {
-    background-color: #333; /* Dark background for elegance */
+    background-color: #333;
+    /* Dark background for elegance */
     color: #fff;
     text-align: center;
     padding: 20px;
-    font-family: 'Georgia', serif; /* Literary, refined look */
+    font-family: 'Georgia', serif;
+    /* Literary, refined look */
     width: 100%;
     margin-top: 40px;
 }
 
 .quote-container {
-    max-width: 60%; /* Limits width for better readability */
+    max-width: 60%;
+    /* Limits width for better readability */
     margin: 0 auto;
     padding: 10px;
-    line-height: 1.6; /* Improves readability */
+    line-height: 1.6;
+    /* Improves readability */
 }
 
-.quote-arabic, .quote-english {
-    font-size: 13px; /* Smaller, refined font size */
+.quote-arabic,
+.quote-english {
+    font-size: 13px;
+    /* Smaller, refined font size */
     font-style: italic;
     text-align: center;
 }
 
 .quote-arabic {
-    direction: rtl; /* Ensures proper Arabic alignment */
+    direction: rtl;
+    /* Ensures proper Arabic alignment */
     margin-bottom: 10px;
 }
 
@@ -228,7 +238,8 @@ footer {
 .quote-author {
     font-size: 10px;
     font-weight: bold;
-    color: #bbb; /* Slightly dimmed for hierarchy */
+    color: #bbb;
+    /* Slightly dimmed for hierarchy */
     margin-top: 10px;
 }
 
@@ -266,19 +277,25 @@ footer {
     margin-bottom: 1em;
 }
 
-.teaching, .mentorship, .research {
+.teaching,
+.mentorship,
+.research {
     background: #f4f4f4;
     padding: 2em;
     margin: 1em 0;
     border-radius: 10px;
 }
 
-.teaching ul, .mentorship ul, .research ul {
+.teaching ul,
+.mentorship ul,
+.research ul {
     list-style-type: none;
     padding: 0;
 }
 
-.teaching li, .mentorship li, .research li {
+.teaching li,
+.mentorship li,
+.research li {
     background: #fff;
     padding: 1em;
     margin: 0.5em 0;
@@ -353,7 +370,7 @@ footer {
     font-weight: 600;
     margin-bottom: 15px;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .header-text .welcome {
@@ -378,6 +395,36 @@ footer {
 
 .header-text p:hover {
     transform: translateY(-2px);
-    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
 }
 
+
+.links-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link:hover {
+    transform: translateY(-5px);
+    color: #000;
+}
+
+.icon-link i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon-link span {
+    font-size: 0.9rem;
+}
