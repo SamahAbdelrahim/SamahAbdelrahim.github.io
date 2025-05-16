@@ -69,6 +69,64 @@ header p {
     opacity: 0.9;
 }
 
+/* Modern Navigation Bar */
+.modern-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    padding: 15px 0;
+    gap: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Color-coded sections */
+.nav-item.person {
+    background-color: #c1b29c;
+    color: #fff;
+}
+
+.nav-item.researcher {
+    background-color: #7e400d;
+    color: #fff;
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0.95;
+}
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+    .modern-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-item {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+.nav-item.active {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 
 nav {
     background-color: #fff;
