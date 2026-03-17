@@ -95,6 +95,11 @@ body {
     color: #fff;
 }
 
+.main-nav .nav-item.teacher {
+    background-color: #4b6a9b;
+    color: #fff;
+}
+
 .main-nav .nav-item:hover {
     transform: translateX(4px) scale(1.02);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
@@ -156,44 +161,61 @@ body {
     }
 
     .header-inner {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 12px;
-        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
     .header-image-wrapper .header-image {
-        width: 48px;
-        height: 48px;
+        width: 64px;
+        height: 64px;
     }
 
     .header-text {
-        flex: 1;
-        min-width: 120px;
-        text-align: left;
+        text-align: center;
     }
 
     .header-text .name {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .header-text .tagline {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
     }
 
     .main-nav {
         flex-direction: row;
-        width: auto;
-        order: 1;
-        margin-left: auto;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: 0;
         gap: 8px;
+    }
+
+    .main-nav .nav-item {
+        padding: 6px 14px;
+        font-size: 0.9rem;
     }
 
     .main-nav .nav-item:hover {
         transform: translateY(-2px) scale(1.02);
     }
 
-    .main-nav .nav-item {
+    .header-contact {
+        flex: 1 1 100%;
+        order: 10;
+        margin-top: 4px;
+        padding-top: 10px;
+    }
+
+    .header-address {
+        font-size: 0.75rem;
+    }
+
+    .header-email {
+        font-size: 0.75rem;
+    }
         padding: 8px 14px;
         font-size: 0.9rem;
     }
@@ -522,8 +544,22 @@ footer {
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    color: #333;
+    color: #f9f9f9;
     transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link:hover {
+    transform: translateY(-5px);
+    color: #ffffff;
+}
+
+.icon-link i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.icon-link span {
+    font-size: 0.9rem;
 }
 
 .icon-link:hover {
