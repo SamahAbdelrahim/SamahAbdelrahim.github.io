@@ -202,13 +202,6 @@ body {
         transform: translateY(-2px) scale(1.02);
     }
 
-    .header-contact {
-        flex: 1 1 100%;
-        order: 10;
-        margin-top: 4px;
-        padding-top: 10px;
-    }
-
     .header-address {
         font-size: 0.75rem;
     }
@@ -216,23 +209,85 @@ body {
     .header-email {
         font-size: 0.75rem;
     }
-        padding: 8px 14px;
-        font-size: 0.9rem;
+
+    /* Mobile: header scrolls with page (not stuck covering half the screen) */
+    .site-header {
+        position: static;
+        top: auto;
+        height: auto;
+        z-index: auto;
     }
 
-    .header-contact {
+    /* Collapsible contact block (native <details>) */
+    .header-contact-details {
         flex: 1 1 100%;
         order: 10;
+        width: 100%;
+        border: none;
         margin-top: 4px;
-        padding-top: 10px;
     }
 
-    .header-address {
-        font-size: 0.75rem;
+    .header-contact-details summary {
+        list-style: none;
+        cursor: pointer;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.92);
+        padding: 8px 10px;
+        text-align: center;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
     }
 
-    .header-email {
-        font-size: 0.75rem;
+    .header-contact-details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .header-contact-details .header-contact {
+        margin-top: 0;
+        padding-top: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        flex: none;
+        order: unset;
+    }
+
+    .header-contact-details .links-container {
+        margin: 0.75rem 0 0;
+    }
+
+    /* Compact header after user scrolls (class toggled by mobile-header.js) */
+    body.mobile-header-compact .site-header {
+        padding: 8px 12px;
+    }
+
+    body.mobile-header-compact .header-inner {
+        gap: 6px;
+    }
+
+    body.mobile-header-compact .header-image-wrapper .header-image {
+        width: 44px;
+        height: 44px;
+    }
+
+    body.mobile-header-compact .header-text .tagline {
+        display: none;
+    }
+
+    body.mobile-header-compact .main-nav .nav-item {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    body.mobile-header-compact .header-contact-details summary {
+        padding: 6px 8px;
+        font-size: 0.78rem;
+    }
+}
+
+/* Desktop: hide <summary>, show contact like a plain block (details kept open via JS) */
+@media (min-width: 769px) {
+    .header-contact-details summary {
+        display: none;
     }
 }
 
