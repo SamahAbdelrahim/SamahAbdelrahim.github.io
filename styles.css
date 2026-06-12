@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -91,7 +93,7 @@ body {
 }
 
 .main-nav .nav-item.researcher {
-    background-color: #7e400d;
+    background-color: #9B5E2A;
     color: #fff;
 }
 
@@ -408,11 +410,23 @@ nav:not(.main-nav) a:hover {
 .blog-links a {
     display: block;
     margin: 0.5em 0;
-    padding: 0.5em;
+    padding: 0.6em 0.8em;
     background-color: #e7e7e7;
     color: #333;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.blog-links a .blog-link-title {
+    font-weight: 500;
+    display: block;
+}
+
+.blog-links a .blog-link-desc {
+    font-size: 0.82rem;
+    color: #555;
+    display: block;
+    margin-top: 2px;
 }
 
 .blog-links a:hover {
@@ -442,8 +456,7 @@ footer {
 
 .quote-arabic,
 .quote-english {
-    font-size: 13px;
-    /* Smaller, refined font size */
+    font-size: 15px;
     font-style: italic;
     text-align: center;
 }
@@ -460,10 +473,9 @@ footer {
 }
 
 .quote-author {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: bold;
     color: #bbb;
-    /* Slightly dimmed for hierarchy */
     margin-top: 10px;
 }
 
