@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Inter', Arial, sans-serif;
+    font-size: 0.95rem;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -434,13 +435,14 @@ nav:not(.main-nav) a:hover {
 }
 
 footer {
-    background-color: #333;
-    /* Dark background for elegance */
+    /* Blend from the sidebar's black into the footer grey so the corner seam merges softly */
+    background: linear-gradient(to right, #1a1a1a 0, #333 180px);
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-family: 'Georgia', serif;
     /* Literary, refined look */
+    font-size: 0.7rem;
     width: 100%;
     margin-top: 40px;
 }
@@ -449,14 +451,14 @@ footer {
     max-width: 60%;
     /* Limits width for better readability */
     margin: 0 auto;
-    padding: 10px;
-    line-height: 1.6;
+    padding: 5px;
+    line-height: 1.5;
     /* Improves readability */
 }
 
 .quote-arabic,
 .quote-english {
-    font-size: 15px;
+    font-size: 0.7rem;
     font-style: italic;
     text-align: center;
 }
@@ -473,10 +475,10 @@ footer {
 }
 
 .quote-author {
-    font-size: 12px;
+    font-size: 0.65rem;
     font-weight: bold;
     color: #bbb;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .gallery img {
@@ -680,8 +682,8 @@ footer {
 }
 
 .project {
-    margin-bottom: 2.5rem;
-    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -690,22 +692,24 @@ footer {
 .project h4 {
     margin-top: 0;
     color: #333;
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .project p {
-    margin-bottom: 1rem;
-    line-height: 1.6;
+    font-size: 0.85rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.5;
 }
 
 .project-reference {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     color: #666;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding-top: 1rem;
-    margin-top: 1rem;
+    padding-top: 0.6rem;
+    margin-top: 0.6rem;
 }
+
 
 .project-reference a {
     color: #0066cc;
@@ -714,4 +718,128 @@ footer {
 
 .project-reference a:hover {
     text-decoration: underline;
+}
+
+.lab-logo-inline {
+    height: 40px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.project-figures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.project-figure {
+    margin: 1rem auto;
+    max-width: 420px;
+    text-align: center;
+}
+
+.project-figures .project-figure {
+    flex: 1 1 300px;
+    margin: 0;
+}
+
+.project-figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    background: #fff;
+}
+
+.project-figure figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.project-figure-wide {
+    max-width: 520px;
+}
+
+/* Project cards with a side image: sharp on the right edge, fading into a
+   blurred wash where the content overlaps it */
+.project-visual {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--proj-img-blur) center 30% / cover no-repeat;
+    opacity: 0.16;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.project-visual::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    height: 100%;
+    /* width follows the image's aspect ratio, so the full figure fits the card height */
+    aspect-ratio: var(--proj-img-ratio);
+    max-width: 55%;
+    background: var(--proj-img-sharp) right center / contain no-repeat;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.9) 45%, transparent 98%);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.9) 45%, transparent 98%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.project-visual > * {
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 769px) {
+    .project-visual {
+        padding-right: 34%;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-visual::after {
+        -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.35) 30%, transparent 95%);
+        mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.35) 30%, transparent 95%);
+    }
+}
+
+.project-bg-stimuli {
+    --proj-img-sharp: url("gallery/stimuli_photos.jpg");
+    --proj-img-blur: url("gallery/stimuli_bg_blur.jpg");
+    --proj-img-ratio: 640 / 1251;
+}
+
+.project-bg-forest {
+    --proj-img-sharp: url("gallery/jcl_forest_crop.jpg");
+    --proj-img-blur: url("gallery/jcl_forest_blur.jpg");
+    --proj-img-ratio: 476 / 1280;
+}
+
+.project-bg-lexstats {
+    --proj-img-sharp: url("gallery/lexstats_densities.jpg");
+    --proj-img-blur: url("gallery/lexstats_densities_blur.jpg");
+    --proj-img-ratio: 800 / 907;
+}
+
+/* The 16-panel grid is nearly square: keep it smaller than the tall figures
+   and fade it out earlier so the description stays readable */
+.project-bg-lexstats::after {
+    height: 85%;
+    max-width: 44%;
+    -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.8) 40%, transparent 88%);
+    mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.8) 40%, transparent 88%);
 }
