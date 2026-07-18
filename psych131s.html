@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSYCH 131S: The Developing Mind - Samah Abdelrahim</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <style>
+        /* Page-scoped styles for psych131s.html only */
+
+        /* Container overrides: allow hero + wide sections without breaking text width */
+        .course-page .container {
+            max-width: 860px;
+        }
+
+        .course-page .section {
+            background: transparent;
+            padding: 2.5em 2em;
+            margin: 0;
+        }
+
+        .course-page .section:nth-child(odd),
+        .course-page .section:nth-child(even) {
+            background: transparent;
+        }
+
+        .course-page .section h2 {
+            border-bottom: none;
+            font-size: 1.5rem;
+            color: #2a2a2a;
+            margin-top: 0;
+            margin-bottom: 0.75em;
+            position: relative;
+            padding-left: 0;
+        }
+
+        .course-page .section h2::before {
+            content: "";
+            display: block;
+            width: 44px;
+            height: 3px;
+            background: #4b6a9b;
+            border-radius: 2px;
+            margin-bottom: 0.6em;
+        }
+
+        .course-page .section p {
+            line-height: 1.7;
+            color: #333;
+        }
+
+        /* Hero banner */
+        .course-hero {
+            background: linear-gradient(135deg, #4b6a9b 0%, #3a5580 100%);
+            color: #fff;
+            padding: 3.5em 2em 3em;
+            text-align: left;
+        }
+
+        .course-hero .hero-inner {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .course-hero .hero-eyebrow {
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.75);
+            margin: 0 0 0.75em 0;
+            font-weight: 500;
+        }
+
+        .course-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 1.15;
+            margin: 0 0 0.4em 0;
+            color: #fff;
+        }
+
+        .course-hero .hero-subtitle {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0 0 1.6em 0;
+            font-weight: 400;
+        }
+
+        .hero-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 1.6em;
+        }
+
+        .hero-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero-chip i {
+            font-size: 0.78rem;
+            opacity: 0.85;
+        }
+
+        .hero-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fff;
+            color: #3a5580;
+            padding: 10px 20px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* CDM callout box */
+        .cdm-callout {
+            background: linear-gradient(135deg, #fdf6ec 0%, #f5e9d4 100%);
+            border-left: 5px solid #9B5E2A;
+            border-radius: 12px;
+            padding: 2em 2em 1.5em;
+            margin: 1em 0 1.5em;
+            box-shadow: 0 4px 14px rgba(155, 94, 42, 0.08);
+        }
+
+        .cdm-callout .cdm-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 1em;
+        }
+
+        .cdm-callout .cdm-icon {
+            width: 44px;
+            height: 44px;
+            background: #9B5E2A;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .cdm-callout .cdm-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #6d3f1c;
+            margin: 0;
+        }
+
+        .cdm-callout .cdm-subtitle {
+            font-size: 0.85rem;
+            color: #8a6a4a;
+            margin: 2px 0 0;
+        }
+
+        .cdm-callout p {
+            color: #3d2c1a;
+            margin: 0 0 1em 0;
+        }
+
+        .cdm-callout a {
+            color: #6d3f1c;
+            font-weight: 500;
+        }
+
+        /* CDM tour photo essay */
+        .cdm-photo-essay {
+            margin-top: 2em;
+        }
+
+        .cdm-photo-caption {
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            font-size: 0.95rem;
+            color: #6d3f1c;
+            text-align: center;
+            margin: 0 0 1em 0;
+            letter-spacing: 0.3px;
+        }
+
+        .cdm-hero-photo {
+            margin: 0 0 12px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .cdm-hero-photo img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .cdm-hero-photo:hover img {
+            transform: scale(1.02);
+        }
+
+        .cdm-photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: dense;
+            gap: 12px;
+        }
+
+        .cdm-photo-grid figure {
+            margin: 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+            background: #eee;
+        }
+
+        .cdm-photo-grid img {
+            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .cdm-photo-grid figure:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Portrait photo spans two rows and anchors to the right column */
+        .cdm-photo-grid figure.tall {
+            grid-row: span 2;
+            grid-column: 3;
+        }
+
+        .cdm-photo-grid figure.tall img {
+            height: 100%;
+            min-height: 372px;
+        }
+
+        /* Contact section soft styling */
+        .contact-box {
+            background: #f4efe7;
+            border-radius: 10px;
+            padding: 1.5em;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #4a3f2e;
+        }
+
+        .contact-box a {
+            color: #4b6a9b;
+            font-weight: 500;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .course-hero {
+                padding: 2.5em 1.5em 2em;
+            }
+
+            .course-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .course-hero .hero-subtitle {
+                font-size: 1.05rem;
+            }
+
+            .cdm-photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cdm-photo-grid img {
+                height: 140px;
+            }
+
+            .cdm-photo-grid figure.tall {
+                grid-row: span 1;
+            }
+
+            .cdm-photo-grid figure.tall img {
+                height: 140px;
+                min-height: 140px;
+            }
+
+            .course-page .section {
+                padding: 2em 1.5em;
+            }
+        }
+    </style>
+</head>
+
+<body class="course-page">
+    <div class="page-layout">
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="header-image-wrapper">
+                    <img src="gallery/image6.png" alt="Samah Abdelrahim" class="header-image">
+                </div>
+                <div class="header-text">
+                    <p class="name">Samah Abdelrahim | سماح</p>
+                    <p class="tagline">Welcome! Thanks for being curious about me · حبابكم عشرة بلا كشرة :)</p>
+                </div>
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-item person">The Person</a>
+                    <a href="research.html" class="nav-item researcher">The Researcher</a>
+                    <a href="teacher.html" class="nav-item teacher active">The Teacher</a>
+                </nav>
+                <details class="header-contact-details">
+                    <summary class="header-contact-summary">Contact &amp; links</summary>
+                    <div class="header-contact">
+                        <p class="header-address">
+                            Stanford University<br>
+                            Building 420, Room 288<br>
+                            450 Jane Stanford Way<br>
+                            Stanford, CA 94305
+                        </p>
+                        <p class="header-email">
+                            <a href="mailto:samahabd@stanford.edu">samahabd@stanford.edu</a>
+                        </p>
+                        <div class="links-container">
+                            <a href="Samah_CV_2025.pdf" target="_blank" class="icon-link">
+                                <i class="fas fa-file-alt"></i>
+                                <span>CV</span>
+                            </a>
+                            <a href="https://github.com/SamahAbdelrahim" target="_blank" class="icon-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://osf.io/nw7ze" target="_blank" class="icon-link">
+                                <i class="ai ai-osf"></i>
+                                <span>OSF</span>
+                            </a>
+                            <a href="https://bsky.app/profile/samahrahim.bsky.social" target="_blank" class="icon-link">
+                                <i class="fab fa-bluesky"></i>
+                                <span>Bluesky</span>
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="course-hero">
+                <div class="hero-inner">
+                    <p class="hero-eyebrow">Stanford University · Summer 2026</p>
+                    <h1>PSYCH 131S: The Developing Mind</h1>
+                    <p class="hero-subtitle">How humans learn, think, and communicate</p>
+                    <div class="hero-chips">
+                        <span class="hero-chip"><i class="far fa-calendar"></i> June 23 – August 13, 2026</span>
+                        <span class="hero-chip"><i class="far fa-clock"></i> Tue &amp; Thu, 10:30am–12:30pm</span>
+                        <span class="hero-chip"><i class="fas fa-hourglass-half"></i> 8 weeks</span>
+                        <span class="hero-chip"><i class="fas fa-users"></i> Undergraduate</span>
+                    </div>
+                    <a href="https://explorecourses.stanford.edu/search?view=catalog&academicYear=&q=PSYCH+131S&filter-coursestatus-Active=on"
+                        target="_blank" class="hero-cta">
+                        View on Stanford ExploreCourses <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </section>
+
+            <div class="container">
+
+                <section id="about-course" class="section">
+                    <h2>About the course</h2>
+                    <p>PSYCH 131S is an introduction to developmental psychology, built around a simple question:
+                        how do human beings, starting as babies who cannot yet speak or walk, come to learn, think,
+                        and communicate the way we do? We look at the methods developmental scientists use to
+                        study minds we cannot interview, at what those methods have taught us, and at what the
+                        field still argues about.</p>
+                    <p>The course is designed for Stanford undergraduates in their first years. No prior psychology background is
+                        assumed. We move quickly but stay grounded in concrete examples: real and recent studies and data, and 
+                        real observations of children out in the world.</p>
+                </section>
+
+                <section id="goals" class="section">
+                    <h2>What students take away</h2>
+                    <p>By the end of the term, students should be able to:</p>
+                    <ul>
+                        <li>Explain how developmental cognitive scientists study minds that cannot yet speak, and
+                            what those methods can and cannot tell us.</li>
+                        <li>Read a developmental study and separate its claim from its evidence and its
+                            limitations, rather than taking a headline at face value.</li>
+                        <li>Track how a scientific question changes over time as new evidence, methods, and
+                            replications come in.</li>
+                        <li>Bring a developmental lens to a real setting where children learn, and notice what
+                            is happening beyond what a designer or a caregiver assumed would happen.</li>
+                        <li>Write and speak about developmental research for people who are not in the field,
+                            without losing the honesty of the science.</li>
+                        <li>Engage in a project-based learning experience that allows them to apply the concepts they learn to a real-world setting and bridge the gap between theory and application.</li>
+                    </ul>
+                </section>
+
+                <section id="community-engaged" class="section">
+                    <h2>Community-engaged component</h2>
+                    <p>The course is a community-engaged course, supported by a Graduate Community-Engaged
+                        Teaching (Grad CET) Fellowship from Stanford (2025–2026).</p>
+
+                    <div class="cdm-callout">
+                        <div class="cdm-header">
+                            <div class="cdm-icon"><i class="fas fa-landmark"></i></div>
+                            <div>
+                                <p class="cdm-title">Our community partner</p>
+                                <p class="cdm-subtitle">Children's Discovery Museum of San Jose</p>
+                            </div>
+                        </div>
+                        <p>Students spend part of the term observing at the
+                            <a href="https://www.cdm.org/" target="_blank">Children's Discovery Museum of San
+                                Jose</a> in small teams, working on research questions the museum's education
+                            staff have asked us to help think through. It gives students a place to practice
+                            careful looking, honest description, and research communication with a real
+                            audience who will actually read what they write.
+                        </p>
+
+                    </div>
+
+                    <div class="cdm-photo-essay">
+                        <p class="cdm-photo-caption">From our orientation visit to the museum · July 6, 2026</p>
+                        <figure class="cdm-hero-photo">
+                            <img src="gallery/cdm_IMG_3998.jpg"
+                                alt="A mammoth skeleton exhibit at the Children's Discovery Museum of San Jose, with students looking on">
+                        </figure>
+                        <div class="cdm-photo-grid">
+                            <figure>
+                                <img src="gallery/cdm_IMG_4011.jpg"
+                                    alt="Butterfly sculptures suspended above an exhibit floor at CDM">
+                            </figure>
+                            <figure>
+                                <img src="gallery/cdm_IMG_4004.jpg"
+                                    alt="Students looking at a real ambulance exhibit beneath a hanging paper installation">
+                            </figure>
+                            <figure class="tall">
+                                <img src="gallery/cdm_IMG_3995.jpg"
+                                    alt="Students gathered around a dinosaur skeleton exhibit at CDM">
+                            </figure>
+                            <figure>
+                                <img src="gallery/cdm_IMG_4002.jpg"
+                                    alt="Students walking through the colorful World Market and Rainbow Food Truck play areas at CDM">
+                            </figure>
+                            <figure>
+                                <img src="gallery/cdm_IMG_3993.jpg"
+                                    alt="Students entering a museum gallery at CDM">
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="teaching-approach" class="section">
+                    <h2>How the course is taught</h2>
+                    <p>Class time is a mix of short lectures, in-class demonstrations of the studies we are
+                        reading, small-group discussion, and hands-on activities. Assessment is weighted
+                        toward the museum project and toward writing and speaking about research, rather than
+                        toward exams. Readings are short and chosen so that most of the intellectual work
+                        happens together in the room.</p>
+                    <p>My teaching approach on the
+                        <a href="teacher.html">Teacher page</a> says most of what I would say here: teaching
+                        is mostly listening, and my job is to take a student's question seriously enough that
+                        we can both learn something from following it. This course has been my first chance to really build
+                        a whole term around that idea.</p>
+                </section>
+
+                <section id="contact-course" class="section">
+                    <h2>Questions about the course</h2>
+                    <div class="contact-box">
+                        <p>If you are a prospective student, a colleague thinking about a similar course, or
+                            someone at a museum or school wondering how the community-engaged piece works, I am
+                            happy to hear from you:
+                            <a href="mailto:samahabd@stanford.edu">samahabd@stanford.edu</a>.
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+            <footer>
+                <div class="quote-container">
+                    <p class="quote-arabic">
+                        "سأحيا لأن ثمة أناس قليلين أحب أن أبقى معهم أطول وقت ممكن
+                        ولأن عليّ واجبات يجب أن أؤديها, لا يعنيني إن كان للحياة معنى أو لم يكن لها معنى
+                        وإن كنت لا أستطيع أن أغفر فسأحاول أن أنسى"
+                    </p>
+                    <p class="quote-english">
+                        "I choose life. I shall live because there are a few people I want to stay with for the longest
+                        possible
+                        time and because I have duties to discharge.
+                        It is not my concern whether or not life has meaning.
+                        If I am unable to forgive, then I shall try to forget."
+                    </p>
+                    <p class="quote-author">
+                        ― Tayeb Salih, <em>Season of Migration to the North</em>
+                    </p>
+                </div>
+                <p>&copy; 2026 Samah Abdelrahim. All rights reserved.</p>
+            </footer>
+        </main>
+    </div>
+    <script src="mobile-header.js"></script>
+</body>
+
+</html>
