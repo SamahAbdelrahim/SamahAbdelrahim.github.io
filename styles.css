@@ -843,3 +843,15 @@ footer {
     -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.8) 40%, transparent 88%);
     mask-image: linear-gradient(to left, rgba(0, 0, 0, 0.8) 40%, transparent 88%);
 }
+/* Respect users who have asked their system to reduce motion */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

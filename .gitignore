@@ -1,3 +1,16 @@
 trash_files/
+.DS_Store
 
 
+
+# Local AI / agent instructional files (keep private; not for remote)
+CLAUDE.md
+MEMORY.md
+TODO.md
+PLAN.md
+CHANGES.md
+
+# HEIC originals: browsers cannot render these and no page references them
+*.HEIC
+*.heic
+psych131s-cdm-tour-gallery/

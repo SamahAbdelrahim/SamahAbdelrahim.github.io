@@ -5,6 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PSYCH 131S: The Developing Mind - Samah Abdelrahim</title>
+    <meta name="description"
+        content="An undergraduate developmental psychology course at Stanford, built around how developmental scientists know what they know: methods, reliability, replication, and honest claims. Includes a community-engaged research project with the Children's Discovery Museum of San Jose.">
+    <link rel="canonical" href="https://samahabdelrahim.github.io/psych131s.html">
+
+    <!-- Social / link previews. Update the og:image if you swap the lead photo. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Samah Abdelrahim">
+    <meta property="og:title" content="PSYCH 131S: The Developing Mind">
+    <meta property="og:description"
+        content="A Stanford undergraduate course on how humans learn, think, and communicate, and on how developmental scientists know it. Community-engaged, with the Children's Discovery Museum of San Jose.">
+    <meta property="og:url" content="https://samahabdelrahim.github.io/psych131s.html">
+    <meta property="og:image" content="https://samahabdelrahim.github.io/gallery/og-psych131s.jpg">
+    <meta property="og:image:alt"
+        content="Students at the Children's Discovery Museum of San Jose during a course orientation visit">
+    <meta name="twitter:card" content="summary_large_image">
+
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -192,7 +208,7 @@
         /* CDM tour photo essay */
         .cdm-photo-essay {
             margin: 2em auto 0;
-            max-width: 640px;
+            max-width: 560px;
         }
 
         .cdm-photo-caption {
@@ -215,7 +231,7 @@
         .cdm-hero-photo img {
             display: block;
             width: 100%;
-            aspect-ratio: 16 / 9;
+            height: 230px;
             object-fit: cover;
             transition: transform 0.6s ease;
         }
@@ -242,7 +258,7 @@
         .cdm-photo-grid img {
             display: block;
             width: 100%;
-            height: 140px;
+            height: 110px;
             object-fit: cover;
             transition: transform 0.4s ease;
         }
@@ -259,7 +275,7 @@
 
         .cdm-photo-grid figure.tall img {
             height: 100%;
-            min-height: 292px;
+            min-height: 232px;
         }
 
         /* Contact section soft styling */
@@ -275,6 +291,103 @@
         .contact-box a {
             color: #4b6a9b;
             font-weight: 500;
+        }
+
+        /* Breadcrumb back to the Teacher page */
+        .hero-back {
+            display: inline-block;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 1.4em;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            padding-bottom: 1px;
+        }
+
+        .hero-back:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        /* Learning-goal clusters */
+        .goal-group {
+            margin: 0 0 1.75em 0;
+        }
+
+        .goal-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .goal-group h3 {
+            font-size: 0.78rem;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #4b6a9b;
+            margin: 0 0 0.6em 0;
+        }
+
+        .goal-group ul {
+            margin: 0;
+            padding-left: 1.25em;
+        }
+
+        .goal-group li {
+            line-height: 1.65;
+            color: #333;
+            margin-bottom: 0.55em;
+        }
+
+        .goal-group li:last-child {
+            margin-bottom: 0;
+        }
+
+        .goal-group li em {
+            font-style: normal;
+            font-weight: 600;
+            color: #2a2a2a;
+        }
+
+        /* Methods callout. Blue = the science thread; the brown callout below = the community thread. */
+        .evidence-note {
+            background: #f2f5fa;
+            border-left: 5px solid #4b6a9b;
+            border-radius: 12px;
+            padding: 1.6em 1.8em;
+            margin: 1.25em 0 0;
+        }
+
+        .evidence-note p {
+            color: #2f3a4a;
+            margin: 0 0 1em 0;
+        }
+
+        .evidence-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Practical details */
+        .practical-list {
+            margin: 0;
+        }
+
+        .practical-list dt {
+            font-size: 0.78rem;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #4b6a9b;
+            margin-top: 1.2em;
+        }
+
+        .practical-list dt:first-child {
+            margin-top: 0;
+        }
+
+        .practical-list dd {
+            margin: 0.35em 0 0 0;
+            line-height: 1.65;
+            color: #333;
         }
 
         /* Mobile */
@@ -295,8 +408,12 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
+            .cdm-hero-photo img {
+                height: 190px;
+            }
+
             .cdm-photo-grid img {
-                height: 140px;
+                height: 110px;
             }
 
             .cdm-photo-grid figure.tall {
@@ -304,8 +421,8 @@
             }
 
             .cdm-photo-grid figure.tall img {
-                height: 140px;
-                min-height: 140px;
+                height: 110px;
+                min-height: 110px;
             }
 
             .course-page .section {
@@ -320,7 +437,7 @@
         <header class="site-header">
             <div class="header-inner">
                 <div class="header-image-wrapper">
-                    <img src="gallery/image6.png" alt="Samah Abdelrahim" class="header-image">
+                    <img src="gallery/image6.png" alt="Samah Abdelrahim" class="header-image" width="300" height="300">
                 </div>
                 <div class="header-text">
                     <p class="name">Samah Abdelrahim | سماح</p>
@@ -344,7 +461,7 @@
                             <a href="mailto:samahabd@stanford.edu">samahabd@stanford.edu</a>
                         </p>
                         <div class="links-container">
-                            <a href="Samah_CV_2025.pdf" target="_blank" class="icon-link">
+                            <a href="Samah_CV_2026.pdf" target="_blank" class="icon-link">
                                 <i class="fas fa-file-alt"></i>
                                 <span>CV</span>
                             </a>
@@ -369,6 +486,7 @@
         <main class="main-content">
             <section class="course-hero">
                 <div class="hero-inner">
+                    <a href="teacher.html" class="hero-back">&larr; The Teacher</a>
                     <p class="hero-eyebrow">Stanford University/Summer 2026</p>
                     <h1>PSYCH 131S: The Developing Mind</h1>
                     <p class="hero-subtitle">How humans learn, think, and communicate</p>
@@ -378,7 +496,7 @@
                         <span class="hero-chip"><i class="fas fa-hourglass-half"></i> 8 weeks</span>
                         <span class="hero-chip"><i class="fas fa-users"></i> Undergraduate</span>
                     </div>
-                    <a href="https://explorecourses.stanford.edu/search?view=catalog&academicYear=&q=PSYCH+131S&filter-coursestatus-Active=on"
+                    <a href="https://explorecourses.stanford.edu/search?view=catalog&amp;academicYear=&amp;q=PSYCH+131S&amp;filter-coursestatus-Active=on"
                         target="_blank" class="hero-cta">
                         View on Stanford ExploreCourses <i class="fas fa-arrow-right"></i>
                     </a>
@@ -394,33 +512,133 @@
                         and communicate the way we do? We look at the methods developmental scientists use to
                         study minds we cannot interview, at what those methods have taught us, and at what the
                         field still argues about.</p>
-                    <p>The course is designed for Stanford undergraduates in their first years. No prior psychology background is
-                        assumed. We move quickly but stay grounded in concrete examples: real and recent studies and data, and 
-                        real observations of children out in the world.</p>
+                    <p>The course is designed for Stanford undergraduates in their first years. No prior psychology
+                        background is assumed. We move quickly but stay grounded in concrete examples: recent studies
+                        and data, and observations of children out in the world.</p>
+                    <p>The spine of the course is methodological. Every topic we take up, from early word learning to
+                        causal reasoning to what children infer about other minds, arrives attached to a harder
+                        question: how could anyone know that, and how much confidence does the evidence license?
+                        Students leave the course knowing some developmental psychology, and, more importantly, able
+                        to interrogate a developmental claim: what was measured, on whom, how many times, whether the
+                        measure holds up, and whether the finding has survived contact with other people's data.</p>
                 </section>
 
                 <section id="goals" class="section">
                     <h2>What students take away</h2>
                     <p>By the end of the term, students should be able to:</p>
-                    <ul>
-                        <li>Explain how developmental cognitive scientists study minds that cannot yet speak, and
-                            what those methods can and cannot tell us.</li>
-                        <li>Read a developmental study and separate its claim from its evidence and its
-                            limitations, rather than taking a headline at face value.</li>
-                        <li>Track how a scientific question changes over time as new evidence, methods, and
-                            replications come in.</li>
-                        <li>Bring a developmental lens to a real setting where children learn, and notice what
-                            is happening beyond what a designer or a caregiver assumed would happen.</li>
-                        <li>Write and speak about developmental research for people who are not in the field,
-                            without losing the honesty of the science.</li>
-                        <li>Engage in a project-based learning experience that allows them to apply the concepts they learn to a real-world setting and bridge the gap between theory and application.</li>
-                    </ul>
+
+                    <div class="goal-group">
+                        <h3>Know how developmental science knows things</h3>
+                        <ul>
+                            <li>Explain how developmental cognitive scientists study minds that cannot yet speak
+                                (looking time, habituation, eye tracking, corpus analysis of children's speech), and
+                                say what each method can and cannot license as a conclusion.</li>
+                            <li>Move from a construct to a measurement: take a question like <em>does this child
+                                    understand that other people can be wrong?</em> and specify what observable
+                                behavior would count as evidence for it, and what would count against it.</li>
+                            <li>Identify the design choices that decide a study's fate: what was measured, on whom,
+                                how many children, how many trials, what was excluded, and when the exclusion rule
+                                was written down.</li>
+                        </ul>
+                    </div>
+
+                    <div class="goal-group">
+                        <h3>Check the evidence, not the headline</h3>
+                        <ul>
+                            <li>Keep three ideas apart that are often collapsed into one: whether a measure is
+                                <em>reliable</em> (would two coders, or the same child on a different afternoon,
+                                give you the same answer?), whether an analysis is <em>reproducible</em> (does the
+                                same data run through the same code give the same numbers?), and whether a finding is
+                                <em>replicable</em> (does it show up again in new data, in another lab, with another
+                                sample of children?).
+                            </li>
+                            <li>Read a developmental study and separate its claim from its evidence and its
+                                limitations, rather than taking a headline at face value.</li>
+                            <li>Explain why developmental research is especially exposed on all three fronts: small
+                                and hard-to-recruit samples, noisy measures taken from noisy participants, effects
+                                estimated from a handful of trials, and studies that are expensive to run again.</li>
+                            <li>Use the field's own correctives (preregistration, effect sizes and intervals rather
+                                than bare significance, multi-lab replication efforts, meta-analysis, open data), and
+                                say what each one does and does not fix.</li>
+                            <li>Track how a scientific question changes over time as new evidence, methods, and
+                                replications come in, including the cases where a finding everyone taught did not
+                                survive.</li>
+                        </ul>
+                    </div>
+
+                    <div class="goal-group">
+                        <h3>Do it yourself, on a real question</h3>
+                        <ul>
+                            <li>Turn a partner's question into an answerable one, and be explicit about what you gave
+                                up to make it answerable.</li>
+                            <li>Build an observational coding scheme, apply it alongside a teammate, check whether
+                                the two of you actually agree, and revise it when you don't. Reliability stops being
+                                an abstraction the first time two people watch the same child and write down
+                                different things.</li>
+                            <li>Bring a developmental lens to a real setting where children learn, and notice what
+                                is happening beyond what a designer or a caregiver assumed would happen.</li>
+                            <li>Observe children ethically: what it means to study people who cannot consent for
+                                themselves, what you owe the families in the room, and what you owe an institution
+                                that let you in.</li>
+                        </ul>
+                    </div>
+
+                    <div class="goal-group">
+                        <h3>Say what you found, without lowering the bar</h3>
+                        <ul>
+                            <li>Write and speak about developmental research for people who are not in the field,
+                                without losing the honesty of the science.</li>
+                            <li>Hold rigor and usefulness at the same time: tell an audience who would prefer a
+                                cleaner answer what one afternoon of watching a dozen children can support, and what
+                                it cannot.</li>
+                            <li>Tell the difference between an observation that raises a hypothesis and a result that
+                                tests one, and label which of the two you are handing to a partner.</li>
+                            <li>Ask who informal science learning reaches and who it does not, and what a sample of
+                                museum visitors on a weekday morning can support about &ldquo;children&rdquo; in
+                                general.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section id="methods-thread" class="section">
+                    <h2>The methods thread</h2>
+                    <p>Rather than teaching methods once, in a week near the front, the course runs a single
+                        methodological thread through every unit. Each topic is introduced through a study we can take
+                        apart in the room: what the researchers did, what they counted, what they concluded, and what
+                        a careful reader is entitled to believe. We then follow what happened to that study afterwards
+                        (the direct replication, the failed replication, the re-analysis, the meta-analysis that
+                        pooled it with twenty others), so that students see a finding as something with a history
+                        rather than a fact in a textbook.</p>
+
+                    <div class="evidence-note">
+                        <p>Three questions come back every week, and by the end students ask them on their own:
+                            <strong>Would the measure agree with itself?</strong> <strong>Would the analysis run the
+                                same way twice?</strong> <strong>Has anyone else seen this?</strong> They are the
+                            course's working definitions of reliability, reproducibility, and replicability, and
+                            students apply them both to published work and to their own museum data.</p>
+                        <!-- CONFIRM before publishing: name the specific resources you actually assign. Candidates
+                             that fit this course: ManyBabies multi-lab replication reports, MetaLab, Wordbank/CDI,
+                             the Open Science Collaboration replication project. Delete any you don't use. -->
+                        <p>Students also work with the field's public infrastructure directly: large multi-lab
+                            replication reports, meta-analytic databases, and open datasets of children's language, so
+                            that &ldquo;the evidence&rdquo; is something they have handled themselves rather than
+                            something they have been told about.</p>
+                    </div>
                 </section>
 
                 <section id="community-engaged" class="section">
                     <h2>Community-engaged component</h2>
-                    <p>The course is a community-engaged course, supported by a Graduate Community-Engaged
-                        Teaching (Grad CET) Fellowship from Stanford (2025–2026).</p>
+                    <p>The course is community-engaged, supported by a Graduate Community-Engaged Teaching (Grad CET)
+                        Fellowship from Stanford's Haas Center for Public Service, a Cardinal Course development
+                        grant, and the Summer Session program (2025&ndash;2026).</p>
+                    <p>The community-engaged piece is not a field trip bolted onto a lecture course; it is where the
+                        methodological argument of the course gets tested. A museum's education staff need something
+                        they can act on, and a careful researcher can rarely give them something that clean. Students
+                        spend the second half of the term inside that tension: designing an observation that is honest
+                        enough to be worth doing and small enough to be possible, then reporting it to people who will
+                        use it without overstating what a handful of afternoons can support. Learning to keep the
+                        uncertainty attached when a real audience would rather you didn't is, in my view, the most
+                        transferable thing the course teaches.</p>
 
                     <div class="cdm-callout">
                         <div class="cdm-header">
@@ -434,38 +652,48 @@
                             <a href="https://www.cdm.org/" target="_blank">Children's Discovery Museum of San
                                 Jose</a> in small teams, working on research questions the museum's education
                             staff have asked us to help think through. It gives students a place to practice
-                            careful looking, honest description, and research communication with a real
-                            audience who will actually read what they write.
+                            careful looking, honest description, and research communication with an audience that
+                            will read what they write.
                         </p>
 
+                        <!-- TODO (high value, and it is what the Cardinal Course criteria ask you to show):
+                             1. Name ONE real question CDM's education staff brought to the class. A concrete
+                                example does more for a reader than any amount of framing.
+                             2. Say what the museum receives at the end - a written brief, a presentation to
+                                staff, a coding scheme they can reuse? This is the reciprocity claim, and right
+                                now the page implies it rather than stating it.
+                             3. Say how students are prepared BEFORE the first visit (observation ethics, museum
+                                protocols, any required clearances). "Student preparation for service" is a
+                                tagging criterion and prospective students want to know what they're walking into.
+                        -->
                     </div>
 
                     <div class="cdm-photo-essay">
                         <p class="cdm-photo-caption">From our orientation visit to the museum / July 6, 2026</p>
                         <figure class="cdm-hero-photo">
                             <img src="gallery/cdm_IMG_3998.jpg"
-                                alt="A mammoth skeleton exhibit at the Children's Discovery Museum of San Jose, with students looking on">
+                                alt="A mammoth skeleton exhibit at the Children's Discovery Museum of San Jose, with students looking on" width="1120" height="840" loading="lazy" decoding="async">
                         </figure>
                         <div class="cdm-photo-grid">
                             <figure>
                                 <img src="gallery/cdm_IMG_4011.jpg"
-                                    alt="Butterfly sculptures suspended above an exhibit floor at CDM">
+                                    alt="Butterfly sculptures suspended above an exhibit floor at CDM" width="720" height="433" loading="lazy" decoding="async">
                             </figure>
                             <figure>
                                 <img src="gallery/cdm_IMG_4004.jpg"
-                                    alt="Students looking at a real ambulance exhibit beneath a hanging paper installation">
+                                    alt="Students looking at a real ambulance exhibit beneath a hanging paper installation" width="720" height="540" loading="lazy" decoding="async">
                             </figure>
                             <figure class="tall">
                                 <img src="gallery/cdm_IMG_3995.jpg"
-                                    alt="Students gathered around a dinosaur skeleton exhibit at CDM">
+                                    alt="Students gathered around a dinosaur skeleton exhibit at CDM" width="540" height="720" loading="lazy" decoding="async">
                             </figure>
                             <figure>
                                 <img src="gallery/cdm_IMG_4002.jpg"
-                                    alt="Students walking through the colorful World Market and Rainbow Food Truck play areas at CDM">
+                                    alt="Students walking through the colorful World Market and Rainbow Food Truck play areas at CDM" width="720" height="540" loading="lazy" decoding="async">
                             </figure>
                             <figure>
                                 <img src="gallery/cdm_IMG_3993.jpg"
-                                    alt="Students entering a museum gallery at CDM">
+                                    alt="Students entering a museum gallery at CDM" width="712" height="720" loading="lazy" decoding="async">
                             </figure>
                         </div>
                     </div>
@@ -481,9 +709,63 @@
                     <p>My teaching approach on the
                         <a href="teacher.html">Teacher page</a> says most of what I would say here: teaching
                         is mostly listening, and my job is to take a student's question seriously enough that
-                        we can both learn something from following it. This course has been my first chance to really build
+                        we can both learn something from following it. This course has been my first chance to build
                         a whole term around that idea.</p>
                 </section>
+
+                <!-- ============================================================================
+                     PRACTICAL DETAILS - commented out because I don't know these values.
+                     Fill in and delete the comment markers. Every line here is something a
+                     prospective student needs before they can decide to enroll, and the
+                     travel/time questions are equity questions as much as logistics ones:
+                     students with summer jobs need to know the real commitment up front.
+                     ============================================================================ -->
+                <!--
+                <section id="practical" class="section">
+                    <h2>Practical details</h2>
+                    <dl class="practical-list">
+                        <dt>Units</dt>
+                        <dd>TODO</dd>
+
+                        <dt>Requirements it fulfills</dt>
+                        <dd>TODO - any WAYS designation, and whether it counts toward the Psychology
+                            major or minor. Also state whether it is a certified Cardinal Course: 12 units of
+                            Cardinal Courses can make a student eligible for the Cardinal Service transcript
+                            notation, which is a concrete reason to enroll.</dd>
+
+                        <dt>Prerequisites</dt>
+                        <dd>None. No prior psychology background is assumed.</dd>
+
+                        <dt>The museum component</dt>
+                        <dd>TODO - how many visits, roughly how long each, and whether transport to San Jose
+                            is arranged or reimbursed.</dd>
+
+                        <dt>Assessment</dt>
+                        <dd>TODO - the actual breakdown. The page currently says assessment is weighted toward
+                            the museum project and toward writing and speaking, which is the right emphasis to
+                            state, but readers will want the components.</dd>
+                    </dl>
+                </section>
+                -->
+
+                <!-- ============================================================================
+                     HOW IT WENT - write this once the term ends (13 August 2026).
+                     This is the section that turns the page from a course advertisement into a
+                     teaching-portfolio artifact: it is evidence the goals above were actually met.
+                     Suggested contents:
+                       - What the student teams delivered to CDM, and what the museum did with it.
+                       - One or two student reflections, quoted with written permission.
+                       - A photo from the final presentations (same consent care as the tour photos:
+                         check permissions for any child or family who is identifiable).
+                       - An honest note on what you would change next time. Search committees and
+                         other instructors read this more closely than anything else on the page.
+                     ============================================================================ -->
+                <!--
+                <section id="how-it-went" class="section">
+                    <h2>How it went</h2>
+                    <p>TODO</p>
+                </section>
+                -->
 
                 <section id="contact-course" class="section">
                     <h2>Questions about the course</h2>
@@ -499,7 +781,7 @@
 
             <footer>
                 <div class="quote-container">
-                    <p class="quote-arabic">
+                    <p class="quote-arabic" lang="ar" dir="rtl">
                         "سأحيا لأن ثمة أناس قليلين أحب أن أبقى معهم أطول وقت ممكن
                         ولأن عليّ واجبات يجب أن أؤديها, لا يعنيني إن كان للحياة معنى أو لم يكن لها معنى
                         وإن كنت لا أستطيع أن أغفر فسأحاول أن أنسى"
