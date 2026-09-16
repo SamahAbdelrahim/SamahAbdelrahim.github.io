@@ -14,3 +14,7 @@ CHANGES.md
 *.HEIC
 *.heic
 psych131s-cdm-tour-gallery/
+Claude outputs/
+
+# scratch HEIC->JPEG conversions for the Summer 2026 course photos
+gallery/psych131s-summer2026-gallery/_work/

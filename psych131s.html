@@ -155,7 +155,7 @@
         /* CDM callout box */
         .cdm-callout {
             background: linear-gradient(135deg, #fdf6ec 0%, #f5e9d4 100%);
-            border-left: 5px solid #9B5E2A;
+            /* border-left: 5px solid #9B5E2A; */
             border-radius: 12px;
             padding: 2em 2em 1.5em;
             margin: 1em 0 1.5em;
@@ -278,6 +278,45 @@
             min-height: 232px;
         }
 
+        /* "How it went" evidence figures: slides must stay legible, so no cropping */
+        .evidence-lead {
+            margin: 1.6em 0 0.6em;
+        }
+
+        .evidence-lead img,
+        .evidence-grid img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+        }
+
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 22px;
+            margin-top: 1.4em;
+        }
+
+        .evidence-grid figure {
+            margin: 0;
+        }
+
+        .evidence-lead figcaption,
+        .evidence-grid figcaption {
+            font-size: 0.86rem;
+            line-height: 1.45;
+            color: #5b4636;
+            margin-top: 0.55em;
+        }
+
+        .evidence-note {
+            font-size: 0.8rem;
+            color: #7a6a5c;
+            margin-top: 1.6em;
+        }
+
         /* Contact section soft styling */
         .contact-box {
             background: #f4efe7;
@@ -351,7 +390,7 @@
         /* Methods callout. Blue = the science thread; the brown callout below = the community thread. */
         .evidence-note {
             background: #f2f5fa;
-            border-left: 5px solid #4b6a9b;
+            /* border-left: 5px solid #4b6a9b; */
             border-radius: 12px;
             padding: 1.6em 1.8em;
             margin: 1.25em 0 0;
@@ -418,6 +457,10 @@
 
             .cdm-photo-grid figure.tall {
                 grid-row: span 1;
+            }
+
+            .evidence-grid {
+                grid-template-columns: 1fr;
             }
 
             .cdm-photo-grid figure.tall img {
@@ -492,8 +535,8 @@
                     <p class="hero-subtitle">How humans learn, think, and communicate</p>
                     <div class="hero-chips">
                         <span class="hero-chip"><i class="far fa-calendar"></i> June 23 – August 13, 2026</span>
-                        <span class="hero-chip"><i class="far fa-clock"></i> Tue &amp; Thu, 10:30am–12:30pm</span>
-                        <span class="hero-chip"><i class="fas fa-hourglass-half"></i> 8 weeks</span>
+                        <!-- <span class="hero-chip"><i class="far fa-clock"></i> Tue &amp; Thu, 10:30am–12:30pm</span> -->
+                        <!-- <span class="hero-chip"><i class="fas fa-hourglass-half"></i> 8 weeks</span> -->
                         <span class="hero-chip"><i class="fas fa-users"></i> Undergraduate</span>
                     </div>
                     <a href="https://explorecourses.stanford.edu/search?view=catalog&amp;academicYear=&amp;q=PSYCH+131S&amp;filter-coursestatus-Active=on"
@@ -512,15 +555,15 @@
                         and communicate the way we do? We look at the methods developmental scientists use to
                         study minds we cannot interview, at what those methods have taught us, and at what the
                         field still argues about.</p>
-                    <p>The course is designed for Stanford undergraduates in their first years. No prior psychology
+                    <p>The course is designed for undergraduates in their first years. No prior psychology
                         background is assumed. We move quickly but stay grounded in concrete examples: recent studies
                         and data, and observations of children out in the world.</p>
                     <p>The spine of the course is methodological. Every topic we take up, from early word learning to
-                        causal reasoning to what children infer about other minds, arrives attached to a harder
+                        causal reasoning to what children infer about other minds, is attached to a another
                         question: how could anyone know that, and how much confidence does the evidence license?
                         Students leave the course knowing some developmental psychology, and, more importantly, able
                         to interrogate a developmental claim: what was measured, on whom, how many times, whether the
-                        measure holds up, and whether the finding has survived contact with other people's data.</p>
+                        measure holds up, and whether the finding has survived other people's data and other labs.</p>
                 </section>
 
                 <section id="goals" class="section">
@@ -530,8 +573,7 @@
                     <div class="goal-group">
                         <h3>Know how developmental science knows things</h3>
                         <ul>
-                            <li>Explain how developmental cognitive scientists study minds that cannot yet speak
-                                (looking time, habituation, eye tracking, corpus analysis of children's speech), and
+                            <li>Explain how developmental cognitive scientists study minds that cannot yet speak and
                                 say what each method can and cannot license as a conclusion.</li>
                             <li>Move from a construct to a measurement: take a question like <em>does this child
                                     understand that other people can be wrong?</em> and specify what observable
@@ -542,7 +584,7 @@
                         </ul>
                     </div>
 
-                    <div class="goal-group">
+                    <!-- <div class="goal-group">
                         <h3>Check the evidence, not the headline</h3>
                         <ul>
                             <li>Keep three ideas apart that are often collapsed into one: whether a measure is
@@ -554,7 +596,7 @@
                             </li>
                             <li>Read a developmental study and separate its claim from its evidence and its
                                 limitations, rather than taking a headline at face value.</li>
-                            <li>Explain why developmental research is especially exposed on all three fronts: small
+                            <li>Explain why developmental research is especially exposed on all a couple of fronts (reliability, reproducibility, and replicability): small
                                 and hard-to-recruit samples, noisy measures taken from noisy participants, effects
                                 estimated from a handful of trials, and studies that are expensive to run again.</li>
                             <li>Use the field's own correctives (preregistration, effect sizes and intervals rather
@@ -564,7 +606,7 @@
                                 replications come in, including the cases where a finding everyone taught did not
                                 survive.</li>
                         </ul>
-                    </div>
+                    </div> -->
 
                     <div class="goal-group">
                         <h3>Do it yourself, on a real question</h3>
@@ -706,11 +748,11 @@
                         toward the museum project and toward writing and speaking about research, rather than
                         toward exams. Readings are short and chosen so that most of the intellectual work
                         happens together in the room.</p>
-                    <p>My teaching approach on the
+                    <!-- <p>My teaching approach on the
                         <a href="teacher.html">Teacher page</a> says most of what I would say here: teaching
                         is mostly listening, and my job is to take a student's question seriously enough that
                         we can both learn something from following it. This course has been my first chance to build
-                        a whole term around that idea.</p>
+                        a whole term around that idea.</p> -->
                 </section>
 
                 <!-- ============================================================================
@@ -748,24 +790,74 @@
                 </section>
                 -->
 
-                <!-- ============================================================================
-                     HOW IT WENT - write this once the term ends (13 August 2026).
-                     This is the section that turns the page from a course advertisement into a
-                     teaching-portfolio artifact: it is evidence the goals above were actually met.
-                     Suggested contents:
-                       - What the student teams delivered to CDM, and what the museum did with it.
-                       - One or two student reflections, quoted with written permission.
-                       - A photo from the final presentations (same consent care as the tour photos:
-                         check permissions for any child or family who is identifiable).
-                       - An honest note on what you would change next time. Search committees and
-                         other instructors read this more closely than anything else on the page.
-                     ============================================================================ -->
-                <!--
-                <section id="how-it-went" class="section">
-                    <h2>How it went</h2>
-                    <p>TODO</p>
+                <!-- <section id="how-it-went" class="section">
+                    <h2>How it went</h2> -->
+                    <!-- <p>The course ran from June 23 to August 13, 2026. Student teams spent the second
+                        half of the term observing at the Children's Discovery Museum, and presented
+                        what they found on August 13.</p> -->
+
+                    <!-- <p>What I hoped students would leave with shows up in their own slides. One team
+                        gave a whole slide to what would make them wrong: seven exhibits across three
+                        visits may not represent the museum, they had changed their measures mid-study
+                        after the first ones did not capture what they intended, and children acting on
+                        ten of ten sign-linked prompts still could not tell them that the sign caused
+                        the behavior. Another team reported intraclass correlations for two coder pairs
+                        on the same measure, 0.997 and 0.009, and traced the gap to how explicitly they
+                        had written the stopping criterion. A third measured sound level, crowding, and
+                        tactile materials across the museum floor, morning against afternoon.</p> -->
+
+                    <figure class="evidence-lead">
+                        <img src="gallery/p131s_limitations.jpg"
+                            alt="A student team's slide titled What Would Make Us Wrong, listing limited coverage, measurement limits, and association rather than causation"
+                            width="1120" height="840" loading="lazy" decoding="async">
+                        <figcaption>A team's own limitations slide: seven exhibits, three visits, 375
+                            minutes of observation, measures they had to change mid-study, and an
+                            association they would not read as a cause.</figcaption>
+                    </figure>
+
+                    <div class="evidence-grid">
+                        <figure>
+                            <img src="gallery/p131s_reliability.jpg"
+                                alt="A slide showing intraclass correlation values for two coder pairs on the same interaction-time measure"
+                                width="720" height="540" loading="lazy" decoding="async">
+                            <figcaption>Two coder pairs, one measure, agreement of 0.997 and 0.009. The
+                                difference was in how explicitly the stopping criterion was
+                                written.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="gallery/p131s_sensorymap.jpg"
+                                alt="A hand-annotated floor plan of the museum recording sound level, crowding, and tactile materials in the morning and afternoon"
+                                width="720" height="540" loading="lazy" decoding="async">
+                            <figcaption>Sound level, crowding, and tactile materials, mapped across the
+                                museum floor and compared morning against afternoon.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="gallery/p131s_presentation.jpg"
+                                alt="A student team presenting their findings on stage at the Children's Discovery Museum"
+                                width="720" height="540" loading="lazy" decoding="async">
+                            <figcaption>Final presentations at the museum, August 13,
+                                2026.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="gallery/p131s_audience.jpg"
+                                alt="A student team presenting to a seated audience in the museum theater"
+                                width="720" height="540" loading="lazy" decoding="async">
+                            <figcaption>The teams presented to an audience beyond the class, which is
+                                what made the uncertainty worth keeping attached.</figcaption>
+                        </figure>
+                    </div>
+
+                    <figure class="evidence-lead">
+                        <img src="gallery/p131s_workshop.jpg"
+                            alt="Students working in teams in a Stanford classroom during a team reflection session"
+                            width="720" height="409" loading="lazy" decoding="async">
+                        <figcaption>A team reflection session in class, partway through the
+                            project.</figcaption>
+                    </figure>
+
+                    <p class="evidence-note">Faces and student names in these photographs have been
+                        blurred.</p>
                 </section>
-                -->
 
                 <section id="contact-course" class="section">
                     <h2>Questions about the course</h2>
