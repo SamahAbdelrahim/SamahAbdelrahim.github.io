@@ -1,6 +1,11 @@
 trash_files/
 .DS_Store
 
+# Keep only the current CV PDF public; older / Word drafts stay local
+Samah_CV_2025.pdf
+Samah_CV_2025.docx
+Samah_CV_2026.docx
+
 
 
 # Local AI / agent instructional files (keep private; not for remote)
